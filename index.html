@@ -7,13 +7,19 @@
   <title>Monitoramento Secreto</title>
   <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
- <style>
-   body {
-    background-image: url('https://www.argali.com.br/wp-content/uploads/2017/07/Fundo-WhatsApp.jpg');
-     background-repeat: repeat;
-     background-attachment: fixed;
-   }
- </style>
+  <style>
+    /* garante que o html e o body ocupem 100% da altura */
+    html, body {
+      height: 100%;
+    }
+    /* papel de parede estilo WhatsApp */
+    body {
+      background: url('https://www.argali.com.br/wp-content/uploads/2017/07/Fundo-WhatsApp.jpg') 
+                  repeat fixed center center;
+      /* opcional: ajuste para esticar se quiser cobrir sempre toda largura */
+      /* background-size: cover; */
+    }
+  </style>
 </head>
 
 </head>
