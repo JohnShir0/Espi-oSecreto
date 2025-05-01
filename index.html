@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento Secreto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans text-gray-800">
+
+  <div class="max-w-xl mx-auto p-6 mt-10 border rounded-xl shadow-lg">
+    <div class="text-center">
+      <h1 class="text-xl font-semibold text-green-700 mb-1">Parabéns... Você ganhou uma</h1>
+      <h2 class="text-2xl font-bold text-green-800 mb-4">INVESTIGAÇÃO GRATUITA</h2>
+      <p class="text-sm text-gray-700">Descubra mensagens suspeitas, fotos escondidas e localizações duvidosas de qualquer WhatsApp.</p>
+    </div>
+
+    <img src="https://i.postimg.cc/0231KJ49/image.png" alt="Painel Espião" class="w-full rounded-lg my-6 shadow-md"/>
+
+      <!-- Form -->
+      <form id="investigationForm" class="space-y-4">
+        <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Número do WhatsApp</label>
+            <input type="tel" id="phone" placeholder="(11) 90000-0000" 
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-green-500" 
+                   required>
+        </div>
+
+        
+        <p class="text-xs text-center text-gray-500 mt-4">
+            Ferramenta 100% anônima. Funciona em Android, iPhone, Windows e Mac
+        </p>
+    </form>
+      <!-- 1) Botão -->
+  <button
+  id="btnAccess"
+  type="button"
+  class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-colors duration-300"
+>
+  ACESSAR WHATSAPP
+</button>
+
+<!-- 2) Loading Screen -->
+<div
+  id="loadingScreen"
+  class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+>
+  <div class="bg-white rounded-xl p-6 max-w-xs w-full text-center">
+    <i class="fas fa-sync-alt fa-spin text-green-500 text-5xl mb-4"></i>
+    <h3 class="text-lg font-medium text-gray-800">
+      Analisando número<span class="loading-dots"></span>
+    </h3>
+  </div>
+</div>
+
+<!-- 3) Script -->
+<script>
+  const btn = document.getElementById('btnAccess');
+  const loading = document.getElementById('loadingScreen');
+
+  btn.addEventListener('click', () => {
+    loading.classList.remove('hidden');
+    setTimeout(() => {
+      window.location.href = 'https://www.youtube.com/';
+    }, 5000);
+  });
+</script>
+
+    
+    <!-- Loading Screen (hidden by default) -->
+    <head>
+      …
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        /* Animação dos 3 pontos depois do texto */
+        .loading-dots::after {
+          content: '';
+          animation: ellipsis steps(4,end) 1s infinite;
+        }
+        @keyframes ellipsis {
+          0%   { content: ''; }
+          25%  { content: '.'; }
+          50%  { content: '..'; }
+          75%  { content: '...'; }
+          100% { content: ''; }
+        }
+      </style>
+    </head>
+    
+
+<script>
+    document.getElementById('investigationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading screen
+        document.getElementById('loadingScreen').classList.remove('hidden');
+        
+        // Simulate analysis
+        setTimeout(() => {
+            document.getElementById('loadingScreen').classList.add('hidden');
+            alert('Sistema de monitoramento ativado para o número: ' + document.getElementById('phone').value + '\n\nAnalisando Número');
+        }, 3000);
+    });
+    
+    // Format phone number input
+    document.getElementById('phone').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length > 0) {
+            value = '(' + value;
+        }
+        
+        if (value.length > 3) {
+            value = value.substring(0, 3) + ') ' + value.substring(3);
+        }
+        
+        if (value.length > 10) {
+            value = value.substring(0, 10) + '-' + value.substring(10);
+        }
+        
+        e.target.value = value.substring(0, 15);
+    });
+</script>
+
+  <div class="max-w-2xl mx-auto px-6 mt-10">
+    <img src="https://i.postimg.cc/Y9JqrWkD/image.png" class="mx-auto mb-6" alt="Funções do App"/>
+    <h3 class="text-center text-red-600 font-bold text-lg">Esta ferramenta é 100% anônima</h3>
+    <h4 class="text-center text-blue-700 font-semibold mt-2">Como a ferramenta funciona?</h4>
+    <p class="text-sm text-gray-700 mt-4 text-justify leading-relaxed">
+      Ela clona totalmente o celular da pessoa através do número de telefone. Você só precisa inseri-lo no campo acima e clonar.
+      Não importa se a pessoa utiliza WhatsApp modificado ou mora distante de você, o aplicativo clona TUDO.
+    </p>
+    <p class="text-sm text-gray-700 mt-2 text-justify leading-relaxed">
+      Aplicativo Oficial – Evite cópias. Funcional em Android, iPhone, Windows e Mac.
+    </p>
+    <div class="flex justify-center mb-4">
+      <i class="fas fa-sync-alt fa-spin text-green-500 text-5xl"></i>
+    </div>
+    
+    </div>
+    <p class="text-xs text-center mt-2 text-gray-500 italic">Não responda às mensagens para manter sigilo.</p>
+  </div>
+
+  <div id="loadingScreen" class="hidden fixed inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center z-50">
+    <svg class="animate-spin h-12 w-12 text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+    </svg>
+    <p class="text-green-800 font-semibold text-lg">Analisando número inserido...</p>
+  </div>
+
+  <script>
+    function iniciarAnalise() {
+      document.getElementById('loadingScreen').classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href ="xvideos.com";
+      }, 10000);
+    }
+  </script>
+</body>
+</html>
